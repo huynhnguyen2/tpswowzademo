@@ -1,0 +1,25 @@
+<div id="myElement"></div>
+<script type="text/JavaScript">
+    var playerInstance = jwplayer("myElement");
+//    playerInstance.setup({
+//        file: "rtmp://192.168.10.23:1935/demo/mp4:test1.mp4",
+//
+//    });
+    playerInstance.setup({
+        playlist: [{
+            image: "/assets/myVideo.png",
+            sources: [{
+                file: "rtmp://192.168.10.23:1935/demo/mp4:test1.mp4"
+            }, {
+                file: "http://192.168.10.23:1935/demo/mp4:test1.mp4/playlist.m3u8"
+            }
+            ]
+        }],
+        height: 360,
+        primary: "flash",
+        width: 640
+    });
+</script>
+
+<!-- http://192.168.10.23:1935/demo/mp4:test1.mp4/manifest.mpd -->
+<!-- http://192.168.10.23:1935/demo/mp4:test1.mp4/playlist.m3u8 -->
